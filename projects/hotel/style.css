@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+}
+
+body {
+    background-color: #071A28;
+    color: aliceblue;
+}
+
+header {
+    background-image: url("https://cdn.codechef.com/download/Contest+images/ANTEST/landing+page.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    background-color: transparent;
+    color: white;
+    padding: 20px 16px 80px;
+    font-size: clamp(2.25rem, 7vw, 5rem);
+    text-align: center;
+    font-family: Times;
+}
+
+header h2 {
+    background-color: transparent;
+    color: white;
+    text-align: right;
+    line-height: 1.25;
+    margin: 0 16px 40px;
+    font-family: cursive;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    padding: 20px;
+}
+
+header p {
+    background-color: transparent;
+    color: white;
+    text-align: right;
+    padding: 20px 24px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.book-container {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.book-btn {
+    display: block;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 12px 6px;
+    background-color: #4f2d18;
+    margin-top: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.4;
+    background-color: transparent;
+}
+
+.rooms-table  {
+    width: calc(100% - 32px);
+    max-width: 900px;
+    margin: 40px auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 2px solid #ff4500;
+}
+
+.rooms-table th {
+    background-color: red;
+    text-align: left;
+    font-weight: bold;
+    padding: 12px 10px;
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+}
+
+.rooms-table td {
+    padding: 15px 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ff4500;
+    overflow-wrap: anywhere;
+}
+
+.rooms-table td ul {
+    text-align: left;
+    padding-left: 20px;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.rooms-table td img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 22 / 13;
+    object-fit: cover;
+}
+
+form {
+    width: calc(100% - 32px);
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px red;
+}
+
+label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+input, select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    background-color: red;
+    color: white;
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px auto 0;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: white;
+    color: red;
+    font-weight: bold;
+}
+
+#bookings {
+    padding-bottom: 20px;
+}
+
+.hotel-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.hotel-nav .back-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #ec4899
+    );
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid white;
+    transition: 0.3s ease;
+}
+
+.hotel-nav .back-btn:hover {
+    background: white;
+    color: #9333ea;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #00000066;
+}
+
+@media (max-width: 600px) {
+    .hotel-nav {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .hotel-nav .back-btn {
+        font-size: 12px;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        padding-bottom: 36px;
+    }
+
+    header h2 {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    header p {
+        padding: 16px;
+        text-align: center;
+    }
+
+    header p br {
+        display: none;
+    }
+
+    h3 {
+        margin-top: 48px;
+    }
+
+    .rooms-table {
+        margin: 24px auto;
+    }
+
+    .rooms-table th,
+    .rooms-table td {
+        padding: 10px 6px;
+    }
+
+    .rooms-table td ul {
+        padding-left: 16px;
+    }
+
+    form {
+        padding: 16px;
+    }
+
+    form button {
+        width: 100%;
+    }
+}

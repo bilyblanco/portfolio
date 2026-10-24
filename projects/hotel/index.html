@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel | BilyBlanco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="home">
+        <nav class="hotel-nav">
+            <a href="../../index.html" class="back-btn">
+                ← Back to Portfolio
+            </a>
+        </nav>
+        <h1>Welcome To Chef's Hotels!</h1>
+        <h2>Indulge in <br> Unparalled Luxury</h2>
+        <p>"Step into our world of boundless elegance, where dreams take flight and every moment<br>is a cherished delight. Welcome to a sanctuary of serenity, where opulence meets<br>warmth and extraordinary memories find their way. Embrace the enchantment, as we<br>ensure your comfort, joy, and dreams become our utmost art."</p>
+    </header>
+
+    <main>
+        <section>
+            <h3>Type of Rooms</h3>
+            <table class="rooms-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Option</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://cdn.codechef.com/download/Contest+images/ANTEST/luxury.jpg" alt="Luxury Hotel"><br>
+                        <b>Standard</b>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Free Breakfast</li>
+                            <li>Free Lunch</li>
+                            <li>Free Dinner</li>
+                        </ul>
+                    </td>
+                    <td>Per Night<br>Rs 8000</td>
+                </tr>
+            </table>
+
+            <table class="rooms-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Option</th>
+                    <th>Price</th>
+                </tr>
+               <tr>
+                    <td>
+                        <img src="https://cdn.codechef.com/download/Contest+images/ANTEST/business.jpg" alt="Business"><br>
+                        <b>Business</b>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Free Access to conference rooms</li>
+                            <li>Free Breakfast</li>
+                            <li>Free Lunch</li>
+                            <li>Free Dinner</li>
+                        </ul>
+                    </td>
+                    <td>Per Night<br>Rs 10000</td>
+                </tr>
+            </table>
+
+            <table class="rooms-table">
+                <tr>
+                    <th>Type</th>
+                    <th>Option</th>
+                    <th>Price</th>
+                </tr>
+              <tr>
+                    <td>
+                        <img src="https://cdn.codechef.com/download/Contest+images/ANTEST/resort.jpeg" alt="Luxury"><br>
+                        <b>Luxury</b>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Free Access to conference rooms</li>
+                            <li>Free Pool acess</li>
+                            <li>Free Breakfast</li>
+                            <li>Free Lunch</li>
+                            <li>Free Dinner</li>
+                        </ul>
+                    </td>
+                    <td>Per Night<br>Rs 8000</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="bookings">
+            <h3>Book Your Favorite Room</h3>
+            <form action="submit_booking.php" method="post">
+                <label for="name">Your Beautiful Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Your Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="room">Select Your Favorite Room:</label>
+                <select name="room" id="room" required>
+                    <option value="">--No option will ever dissapoint</option>
+                    <option value="standard">Standard Room</option>
+                    <option value="business">Business Room</option>
+                    <option value="luxury">Luxury Room</option>
+                </select>
+
+                <label for="date">Your Prefered Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Enjoy Your Stay!</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2023 Hrishikesh Kelkar's page. All rights reserved.<br>Send us your feedback at help@codechef.com
+        </p>
+    </footer> 
+</body>
+</html>
