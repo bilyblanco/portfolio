@@ -12,16 +12,27 @@
     <!-- NAVIGATION -->
     <header>
         <nav class="navbar">
-            <a href="#home" class="logo">My<span>Portfolio.</span></a>
+        <a href="#home" class="logo">My<span>Portfolio.</span></a>
 
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
+        <button
+            type="button"
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-controls="nav-links"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
     </header>
 
     <!-- HOME SECTION -->
@@ -31,12 +42,16 @@
 
             <h1>Hi, I'm <span>BilyBlanco</span></h1>
 
-            <h2>Creative Web Developer</h2>
+            <h2>
+                 <span id="typing-text">Creative Web Developer</span>
+                <span class="typing-cursor" aria-hidden="true">|</span>
+            </h2>
 
             <p class="hero-description">
-                I create beautiful, responsive, and user-friendly
-                websites using HTML and CSS. I enjoy turning
-                creative ideas into real websites.
+                I create beautiful, responsive, and interactive
+    websites using HTML, CSS, and JavaScript.
+    I enjoy turning creative ideas into real
+    digital experiences.
             </p>
 
             <div class="hero-buttons">
@@ -70,7 +85,7 @@
             </p>
 
             <p>
-                I'm currently developing my skills in HTML and CSS,
+                I'm currently developing my skills in HTML, CSS and JavaScript,
                 and I've created several projects to practice
                 what I've learned.
             </p>
@@ -114,6 +129,12 @@
                 <h3>Web Design</h3>
                 <p>Creative website layouts</p>
             </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p>DOM manipulation and interactive websites</p>
+            </div>
         </div>
     </section>
 
@@ -126,10 +147,37 @@
             web development.
         </p>
 
+        <div class="project-filters" role="group" aria-label="Filter projects">
+    <button type="button" class="filter-btn active" data-filter="all">
+        All Projects
+    </button>
+
+    <button type="button" class="filter-btn" data-filter="commerce">
+        Shopping & Food
+    </button>
+
+    <button type="button" class="filter-btn" data-filter="education">
+        Education
+    </button>
+
+    <button type="button" class="filter-btn" data-filter="management">
+        Management
+    </button>
+
+    <button type="button" class="filter-btn" data-filter="webapp">
+        Web Apps
+    </button>
+</div>
+
+<p id="project-count" class="project-count" aria-live="polite">
+    Showing 6 projects
+</p>
+
         <div class="projects-container">
 
             <!-- PROJECT 1 -->
-            <div class="project-card">
+            <div class="project-card" data-category="commerce">
+                
                 <div class="project-image gradient-one">
                             <span>🛍️</span>
                 </div>
@@ -149,7 +197,7 @@
             </div>
 
             <!-- PROJECT 2 -->
-            <div class="project-card">
+            <div class="project-card" data-category="management">
                 <div class="project-image gradient-two">
                     <span>🏨</span>
                 </div>
@@ -169,7 +217,7 @@
             </div>
 
             <!-- PROJECT 3 -->
-            <div class="project-card">
+            <div class="project-card" data-category="commerce">
                 <div class="project-image gradient-three">
                     <span>🍔</span>
                 </div>
@@ -190,7 +238,7 @@
             </div>
 
             <!-- PROJECT 4 -->
-            <div class="project-card">
+            <div class="project-card" data-category="education">
                 <div class="project-image gradient-four">
                     <span>📚</span>
                 </div>
@@ -211,7 +259,7 @@
             </div>
 
             <!-- PROJECT 5 -->
-            <div class="project-card">
+            <div class="project-card" data-category="management">
                 <div class="project-image gradient-five">
                     <span>🏥</span>
                 </div>
@@ -232,7 +280,7 @@
             </div>
 
             <!-- PROJECT 6 -->
-            <div class="project-card">
+            <div class="project-card" data-category="webapp">
                 <div class="project-image gradient-six">
                     <span>🔎</span>
                 </div>
