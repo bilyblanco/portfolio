@@ -804,4 +804,84 @@ nav a.nav-active {
         transition: none;
     }
 }
+/* LIGHT MODE - FOLLOW DEVICE SETTINGS */
+
+@media (prefers-color-scheme: light) {
+
+    body {
+        background: #f8fafc;
+        color: #0f172a;
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom-color: #e2e8f0;
+    }
+
+    .about-box,
+    .skill-card,
+    .project-card {
+        background: #ffffff;
+        border-color: #e2e8f0;
+    }
+
+    .hero h2,
+    #typing-text {
+        color: #334155;
+    }
+
+    .hero-description,
+    .section-description,
+    .about-box p,
+    .skill-card p,
+    .project-info p,
+    .project-count {
+        color: #475569;
+    }
+
+    .filter-btn {
+        background: #ffffff;
+        color: #0f172a;
+    }
+
+    .filter-btn.active {
+        background: linear-gradient(135deg, #9333ea, #ec4899);
+        color: white;
+    }
+
+    footer {
+        background: #e2e8f0;
+    }
+
+    footer p {
+        color: #475569;
+    }
+
+    .contact-box {
+        background: linear-gradient(135deg, #ede9fe, #fce7f3);
+    }
+
+    .contact-box p {
+        color: #475569;
+    }
+
+    .contact-box h3 {
+        color: #0f172a;
+    }
+
+    .secondary-btn {
+        color: #0f172a;
+    }
+
+    .menu-toggle {
+        color: #0f172a;
+    }
+
+    @media (max-width: 768px) {
+        .navbar .nav-links {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+    }
+}
 
