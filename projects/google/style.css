@@ -590,3 +590,215 @@ footer p {
         transition: none;
     }
 }
+
+/* ==========================================
+   SEARCHCLONE — LIGHT MODE
+========================================== */
+
+/* THEME VARIABLES */
+
+html[data-theme="light"] {
+    --background: #f8fafc;
+    --card: #ffffff;
+    --muted: #475569;
+    --purple: #9333ea;
+    --pink: #db2777;
+    --cyan: #0e7490;
+}
+
+/* GENERAL */
+
+html[data-theme="light"] body {
+    color: #0f172a;
+}
+
+/* NAVIGATION */
+
+html[data-theme="light"] header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom-color: #e2e8f0;
+}
+
+html[data-theme="light"] .nav-links a,
+html[data-theme="light"] .portfolio-link {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .nav-links a:hover,
+html[data-theme="light"] .portfolio-link:hover {
+    color: #9333ea;
+}
+
+/* SEARCH HERO */
+
+html[data-theme="light"] .search-hero h1 {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .search-hero h1 span {
+    color: transparent;
+}
+
+/* Keep the Google-inspired logo colors unchanged */
+
+/* SEARCH BAR */
+
+html[data-theme="light"] .search-box {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.05);
+}
+
+html[data-theme="light"] .search-box:focus-within {
+    border-color: #9333ea;
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.15);
+}
+
+html[data-theme="light"] .search-box input {
+    color: #0f172a;
+    color-scheme: light;
+}
+
+html[data-theme="light"] .search-box input::placeholder {
+    color: #64748b;
+}
+
+html[data-theme="light"] .clear-search {
+    color: #64748b;
+}
+
+html[data-theme="light"] .clear-search:hover {
+    color: #0f172a;
+}
+
+/* AUTOCOMPLETE SUGGESTIONS */
+
+html[data-theme="light"] .suggestions {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+}
+
+html[data-theme="light"] .suggestion-item {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .suggestion-item:hover,
+html[data-theme="light"] .suggestion-item:focus-visible {
+    background: #f3e8ff;
+    color: #581c87;
+}
+
+/* SEARCH BUTTONS */
+
+html[data-theme="light"] .secondary-btn {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .primary-btn {
+    color: #ffffff;
+}
+
+/* SECTIONS */
+
+html[data-theme="light"] .section-title span {
+    color: #7e22ce;
+}
+
+/* QUICK SEARCHES */
+
+html[data-theme="light"] .quick-search {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .quick-search:hover {
+    background: #f3e8ff;
+    color: #581c87;
+    border-color: #9333ea;
+}
+
+/* RECENT SEARCH HISTORY */
+
+html[data-theme="light"] .recent-box {
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .recent-header h3 {
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .recent-item {
+    background: #f1f5f9;
+}
+
+html[data-theme="light"] .recent-search-button {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .recent-item:hover {
+    background: #ede9fe;
+}
+
+/* CLEAR HISTORY AND REMOVE BUTTONS */
+
+html[data-theme="light"] .history-clear,
+html[data-theme="light"] .recent-remove {
+    color: #be123c;
+}
+
+html[data-theme="light"] .history-clear:hover {
+    background: #ffe4e6;
+}
+
+html[data-theme="light"] .recent-remove:hover {
+    color: #9f1239;
+}
+
+/* FEATURE CARDS */
+
+html[data-theme="light"] .feature-card {
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .feature-card:hover {
+    border-color: #9333ea;
+}
+
+/* ABOUT */
+
+html[data-theme="light"] .about-box {
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .about-box h3 {
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .about-box p {
+    color: #475569;
+}
+
+/* FOOTER */
+
+html[data-theme="light"] footer {
+    background: #e2e8f0;
+    border-top-color: #cbd5e1;
+}
+
+/* THEME BUTTON */
+
+.navbar .shared-theme-toggle {
+    flex-shrink: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .navbar .shared-theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
