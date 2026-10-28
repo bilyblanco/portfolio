@@ -1,102 +1,248 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course | BilyBlanco</title>
+    <title>HTML Course | BilyBlanco</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <header>
-        <nav class="course-nav">
-        <a href="../../index.html" class="back-btn">
-            ← Back to Portfolio
-        </a>
-        </nav>
-        <h1>Introduction To HTML Course</h1>
+        <nav class="navbar">
+            <a href="#home" class="logo">HTML<span>Academy.</span></a>
 
-        <div class="categories">
-            <div class="category-item">
-                <p>Home</p>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#lessons">Lessons</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#progress">Progress</a>
+                <a href="#about">About</a>
             </div>
-            <div class="category-item">
-                <p>Lessons</p>
-            </div>
-            <div class="category-item">
-                <p>Resources</p>
-            </div>
-            <div class="category-item">
-                <p>Contact</p>
-            </div>
-            <div class="headache">
-                <img src="https://cdn.codechef.com/download/Contest+images/NITEST/profile.jpeg" alt="profile-pic">
-                <p>Profile</p>
-            </div>
-        </div>
+
+            <a href="../../index.html" class="portfolio-link">
+                My<span>Portfolio.</span>
+            </a>
+        </nav>
     </header>
 
-    <main>
-        <section class="course-info">
-            <h2>Welcome to the Course!</h2>
-            <p>This course will teach you the fundamentals of HTML (Hypertext Markup Language). HTML is the standard markup language used for creating web pages and web applications</p>
-            <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">Get Started</a>  
-        </section>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting">📚 Welcome to HTML Academy!</p>
 
-        <section class="course-image">
-                <img src="https://cdn.codechef.com/download/Contest+images/NITEST/htmlcode.jpeg" alt="coding">
-        </section>
+            <h1>Learn HTML, <span>Build the Web.</span></h1>
 
-        <section class="content">
-            <div class="overview">
-            <h2>Course Overview</h2>
-            <p>In this course, you will learn:</p>
-            <ul>
-                <li>The basic structure of an HTML document</li>
-                <li>Common HTML tags and their uses</li>
-                <li>How to create links, images, and tables</li>
-                <li>HTML forms and input elements</li>
-                <li>HTML5 semantic elements</li>
-            </ul>
+            <h2>Start your frontend journey here.</h2>
+
+            <p class="hero-description">
+                Learn the foundations of HTML through beginner-friendly
+                lessons, real code examples, and interactive quizzes.
+                Track your progress as you go.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#lessons" class="btn primary-btn">
+                    Start Learning
+                </a>
+
+                <a href="#quiz" class="btn secondary-btn">
+                    Test Your Knowledge
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-art">
+            <div class="art-circle">
+                <span>🌐</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSE OVERVIEW -->
+    <section class="section">
+        <h2 class="section-title">What You'll <span>Learn</span></h2>
+
+        <p class="section-description">
+            Build a strong foundation with practical HTML concepts.
+        </p>
+
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">🏗️</div>
+                <h3>HTML Structure</h3>
+                <p>Understand elements, tags, and document structure.</p>
             </div>
 
-            <section class="schedule">
-            <h2>Course Schedule</h2>
-            <table border="1">
-                <tr>
-                    <th>Date</th>
-                    <th>Topic</th>
-                    <th>Instructor</th>
-                </tr>
-                <tr>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                </tr>
-                 <tr>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                </tr>
-                 <tr>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                </tr>
-                 <tr>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                    <td>Week 1</td>
-                </tr>
-            </table>
-            </section>
-        </section>
-    </main>
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>Links & Images</h3>
+                <p>Connect pages and display visual content.</p>
+            </div>
 
-    <footer>
-        <p>
-            &copy; 2023 Intro to HTML Course. All rights reserved.
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>Forms</h3>
+                <p>Create inputs and collect information.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">♿</div>
+                <h3>Semantic HTML</h3>
+                <p>Write meaningful, accessible page structures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE LESSONS -->
+    <section id="lessons" class="section">
+        <h2 class="section-title">Course <span>Lessons</span></h2>
+
+        <p class="section-description">
+            Select a lesson, read the example, and mark it complete.
         </p>
+
+        <div class="lesson-layout">
+
+            <div class="lesson-sidebar">
+                <h3>Lessons</h3>
+                <div id="lesson-list" class="lesson-list"></div>
+            </div>
+
+            <article class="lesson-content">
+                <span id="lesson-number" class="lesson-badge">
+                    Lesson 1
+                </span>
+
+                <h3 id="lesson-title">Getting Started</h3>
+
+                <p id="lesson-description">
+                    Select a lesson to begin learning.
+                </p>
+
+                <h4>Code Example</h4>
+
+                <pre class="code-example"><code id="lesson-code"></code></pre>
+
+                <p id="lesson-tip" class="lesson-tip"></p>
+
+                <div class="lesson-actions">
+                    <button type="button" id="complete-lesson"
+                        class="btn primary-btn">
+                        Mark as Complete
+                    </button>
+
+                    <button type="button" id="next-lesson"
+                        class="btn secondary-btn">
+                        Next Lesson →
+                    </button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section">
+        <h2 class="section-title">Test Your <span>Knowledge</span></h2>
+
+        <p class="section-description">
+            Answer a few questions to check what you've learned.
+        </p>
+
+        <div class="quiz-box">
+            <div class="quiz-top">
+                <span id="question-number">Question 1 of 5</span>
+                <span id="quiz-score">Score: 0</span>
+            </div>
+
+            <h3 id="quiz-question">Loading question...</h3>
+
+            <div id="quiz-options" class="quiz-options"></div>
+
+            <p id="quiz-feedback" class="quiz-feedback"
+                role="status" aria-live="polite"></p>
+
+            <button type="button" id="next-question"
+                class="btn primary-btn" disabled>
+                Next Question
+            </button>
+
+            <button type="button" id="restart-quiz"
+                class="btn secondary-btn" hidden>
+                Restart Quiz
+            </button>
+        </div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section id="progress" class="section">
+        <h2 class="section-title">Your <span>Progress</span></h2>
+
+        <p class="section-description">
+            Keep track of the lessons you've completed.
+        </p>
+
+        <div class="progress-box">
+            <div class="progress-header">
+                <h3>Course Completion</h3>
+                <span id="progress-percentage">0%</span>
+            </div>
+
+            <div class="progress-track"
+                role="progressbar"
+                aria-label="Course completion"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="progress-track">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+
+            <p id="progress-text">0 of 6 lessons completed.</p>
+
+            <p id="completion-message" class="completion-message"
+                role="status" aria-live="polite"></p>
+
+            <button type="button" id="reset-progress"
+                class="btn secondary-btn">
+                Reset Progress
+            </button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2 class="section-title">About <span>This Course</span></h2>
+
+        <div class="about-box">
+            <h3>Learn by Doing</h3>
+
+            <p>
+                HTML Academy is a beginner-friendly demo learning
+                platform built with HTML, CSS, and JavaScript.
+            </p>
+
+            <p>
+                JavaScript powers lesson navigation, quiz questions,
+                score calculations, and progress tracking.
+            </p>
+
+            <p>
+                Your completed lessons are saved in your browser,
+                so you can return later and continue learning.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 HTML Academy | BilyBlanco</p>
+        <p>Made with ❤️ using HTML, CSS & JavaScript</p>
     </footer>
-    
+
 </body>
+</html>
