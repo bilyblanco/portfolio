@@ -631,3 +631,237 @@ footer p {
         transition: none;
     }
 }
+
+/* ==========================================
+   HTML ACADEMY — LIGHT MODE
+========================================== */
+
+/* GENERAL */
+
+html[data-theme="light"] body {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+/* NAVIGATION */
+
+html[data-theme="light"] header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom-color: #e2e8f0;
+}
+
+html[data-theme="light"] .nav-links a,
+html[data-theme="light"] .portfolio-link {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .nav-links a:hover,
+html[data-theme="light"] .portfolio-link:hover {
+    color: #9333ea;
+}
+
+/* HERO */
+
+html[data-theme="light"] .greeting {
+    color: #0e7490;
+}
+
+html[data-theme="light"] .hero h2 {
+    color: #334155;
+}
+
+html[data-theme="light"] .hero-description {
+    color: #475569;
+}
+
+html[data-theme="light"] .secondary-btn {
+    color: #0f172a;
+}
+
+/* SECTIONS */
+
+html[data-theme="light"] .section-description {
+    color: #475569;
+}
+
+html[data-theme="light"] .section-title span {
+    color: #7e22ce;
+}
+
+/* FEATURE CARDS */
+
+html[data-theme="light"] .feature-card {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .feature-card p {
+    color: #475569;
+}
+
+/* LESSON SIDEBAR AND CONTENT */
+
+html[data-theme="light"] .lesson-sidebar,
+html[data-theme="light"] .lesson-content {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .lesson-sidebar h3 {
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .lesson-button {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .lesson-button:hover,
+html[data-theme="light"] .lesson-button.active {
+    background: #ede9fe;
+    color: #581c87;
+    border-color: #9333ea;
+}
+
+html[data-theme="light"] .lesson-button.completed::after {
+    color: #15803d;
+}
+
+html[data-theme="light"] .lesson-badge {
+    background: #ede9fe;
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .lesson-content p {
+    color: #475569;
+}
+
+html[data-theme="light"] .lesson-content .lesson-tip {
+    color: #7e22ce;
+}
+
+/* CODE EXAMPLES */
+/* Keep a dark code editor for readability */
+
+html[data-theme="light"] .code-example {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+html[data-theme="light"] .code-example code {
+    color: #67e8f9;
+}
+
+/* QUIZ */
+
+html[data-theme="light"] .quiz-box {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .quiz-top {
+    color: #0e7490;
+}
+
+html[data-theme="light"] .quiz-option {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .quiz-option:hover:not(:disabled) {
+    border-color: #9333ea;
+    background: #ede9fe;
+}
+
+/* CORRECT ANSWER */
+
+html[data-theme="light"] .quiz-option.correct {
+    background: #dcfce7;
+    color: #166534;
+    border-color: #16a34a;
+}
+
+/* INCORRECT ANSWER */
+
+html[data-theme="light"] .quiz-option.incorrect {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #dc2626;
+}
+
+html[data-theme="light"] .quiz-feedback {
+    color: #7e22ce;
+}
+
+/* PROGRESS TRACKER */
+
+html[data-theme="light"] .progress-box {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .progress-header span {
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .progress-track {
+    background: #e2e8f0;
+}
+
+html[data-theme="light"] .progress-box p {
+    color: #475569;
+}
+
+html[data-theme="light"] .progress-box .completion-message {
+    color: #15803d;
+}
+
+/* ABOUT */
+
+html[data-theme="light"] .about-box {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .about-box h3 {
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .about-box p {
+    color: #475569;
+}
+
+/* FOOTER */
+
+html[data-theme="light"] footer {
+    background: #e2e8f0;
+    border-top-color: #cbd5e1;
+}
+
+html[data-theme="light"] footer p {
+    color: #475569;
+}
+
+/* KEEP PRIMARY BUTTONS READABLE */
+
+html[data-theme="light"] .primary-btn {
+    color: #ffffff;
+}
+
+/* THEME BUTTON */
+
+.navbar .shared-theme-toggle {
+    flex-shrink: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .navbar .shared-theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
