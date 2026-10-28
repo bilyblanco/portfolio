@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,113 +6,339 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie | BilyBlanco</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+
+    <!-- NAVIGATION -->
     <header>
-        <nav class="foodie-nav">
-        <a href="../../index.html" class="back-btn">
-            ← Back to Portfolio
-        </a>
+        <nav class="navbar">
+            <a href="#home" class="logo">Food<span>ie.</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#restaurants">Restaurants</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html" class="portfolio-link">
+                    My<span>Portfolio.</span>
+                </a>
+
+                <button type="button" id="cart-button" class="cart-button">
+                    🛒 Order <span id="cart-count">0</span>
+                </button>
+            </div>
         </nav>
-        <h2 class="logo">Foodie</h2>
-        <p class="tagline">Delivering happiness at your doorstep!</p>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-left">
-                <h1>Order Food Online in Delhi</h1>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting">🍽️ Welcome to Foodie!</p>
+
+            <h1>Delicious Food, <span>Delivered with Love.</span></h1>
+
+            <h2>Your cravings, our menu.</h2>
+
+            <p class="hero-description">
+                Explore mouthwatering meals, discover your next
+                favorite dish, and build your perfect order.
+                Great food is only a click away.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn primary-btn">Explore Menu</a>
+                <a href="#restaurants" class="btn secondary-btn">
+                    Our Restaurants
+                </a>
             </div>
-            <div class="hero-right">
-                <img src="https://cdn.codechef.com/download/Contest+images/DHTEST/combo.jpeg" alt="Food">
+        </div>
+
+        <div class="hero-art">
+            <div class="art-circle">
+                <span>🍔</span>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <div class="sub-heading">
-            <h2>Restaurants with food online in Delhi</h2>
-        </div> 
+    <!-- MENU -->
+    <section id="menu" class="section">
+        <h2 class="section-title">Explore Our <span>Menu</span></h2>
 
-        <section class="categories">
-           <div class="restaurant">
-            <img src="https://cdn.codechef.com/download/Contest+images/DHTEST/bkcombo.jpeg" alt="burger">
-            <a href="#">Burger King</a>
-            <p>4.5<br>Burger,America<br>Punjabi Bagh</p>
-           </div>
+        <p class="section-description">
+            Find your favorite meals and add them to your order.
+        </p>
 
-           <div class="restaurant">
-            <img src="https://cdn.codechef.com/download/Contest+images/DHTEST/kfccombo.jpeg" alt="fried-chicken">
-            <a href="#">KFC</a>
-            <p>5<br>KFC, London<br>NFC</p>
-           </div>
+        <!-- SEARCH -->
+        <div class="search-container">
+            <label for="food-search" class="visually-hidden">
+                Search for food
+            </label>
 
-           <div class="restaurant">
-            <img src="https://cdn.codechef.com/download/Contest+images/DHTEST/pizza.jpeg" alt="pizza">
-            <a href="#">Dominos</a>
-            <p>4.3<br>Dominos, California<br>ITO</p>
-           </div>
+            <input
+                type="search"
+                id="food-search"
+                placeholder="🔍 Search burgers, pizza, drinks..."
+            >
+        </div>
 
-           <div class="restaurant">
-            <img src="https://cdn.codechef.com/download/Contest+images/DHTEST/swcombo.jpeg" alt="swcombo">
-            <a href="#">SubWay</a>
-            <p>4.5<br>SubWay, New York<br>Central Delhi</p>
-           </div>
-        </section>
+        <!-- FILTER BUTTONS -->
+        <div class="filter-buttons">
+            <button type="button" class="filter-btn active"
+                data-filter="all">All Food</button>
 
-        <section class="list">
-            <h2>World famous food ranking</h2>
-            <ol>
-                <li>Pasta</li>
-                <li>Pizza</li>
-                <li>Burger</li>
-                <li>Momos</li>
-                <li>Sandwich</li>
-            </ol>
-        </section>
+            <button type="button" class="filter-btn"
+                data-filter="burgers">Burgers</button>
 
-        <section class="food-culture">
-            <h2>Food culture in Delhi</h2>
-            <p>Hunger has no excuses. Your cravings must be satisfied, whether it's early morning or late night. Don't let your cravings go in vain. Place your online food order in Delhi with Swiggy and be assured of timely delivery. The capital city of India has countless restaurants near you that deliver piping hot, lip-smacking cuisines.
-Swiggy lets you order your favourite food online in Delhi from top-rated restaurants, cafes, and food joints from your local vicinity. Don't let the plethora of options confuse you. Use search filters and sort your options to find exactly what you need. Looking for that favourite Maharaja Mac? Just type it in the search box, and you will get it.</p>
-        </section>
+            <button type="button" class="filter-btn"
+                data-filter="pizza">Pizza</button>
 
-        <section>
-            <table class="food-table">
-                <tr>
-                    <th>food</th>
-                    <th>famous</th>
-                    <th>price</th>
-                </tr>
-                <tr>
-                    <td>paratha</td>
-                    <td>chandni chowk</td>
-                    <td>987</td>
-                </tr>
-                <tr>
-                    <td>paratha</td>
-                    <td>chandni chowk</td>
-                    <td>987</td>
-                </tr>
-                <tr>
-                    <td>paratha</td>
-                    <td>chandni chowk</td>
-                    <td>987</td>
-                </tr>
-                <tr>
-                    <td>paratha</td>
-                    <td>chandni chowk</td>
-                    <td>987</td>
-                </tr>
-                <tr>
-                    <td>paratha</td>
-                    <td>chandni chowk</td>
-                    <td>987</td>
-                </tr>
-            </table>
-        </section>
-    </main>
+            <button type="button" class="filter-btn"
+                data-filter="local">Local Dishes</button>
 
+            <button type="button" class="filter-btn"
+                data-filter="drinks">Drinks</button>
+        </div>
+
+        <!-- FOOD CARDS -->
+        <div class="food-container">
+
+            <article class="food-card" data-category="burgers">
+                <div class="food-image gradient-one">🍔</div>
+                <div class="food-info">
+                    <span class="food-category">Burgers</span>
+                    <h3>Classic Cheeseburger</h3>
+                    <p>Juicy beef, melted cheese, and fresh veggies.</p>
+
+                    <div class="food-bottom">
+                        <strong>$8.50</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="1"
+                            data-name="Classic Cheeseburger"
+                            data-price="8.50">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="pizza">
+                <div class="food-image gradient-two">🍕</div>
+                <div class="food-info">
+                    <span class="food-category">Pizza</span>
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Cheesy pizza topped with spicy pepperoni.</p>
+
+                    <div class="food-bottom">
+                        <strong>$12.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="2"
+                            data-name="Pepperoni Pizza"
+                            data-price="12">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="local">
+                <div class="food-image gradient-three">🍛</div>
+                <div class="food-info">
+                    <span class="food-category">Local Dishes</span>
+                    <h3>Pilau Special</h3>
+                    <p>Flavorful spiced rice served with tender meat.</p>
+
+                    <div class="food-bottom">
+                        <strong>$7.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="3"
+                            data-name="Pilau Special"
+                            data-price="7">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="burgers">
+                <div class="food-image gradient-four">🍗</div>
+                <div class="food-info">
+                    <span class="food-category">Burgers</span>
+                    <h3>Crispy Chicken Burger</h3>
+                    <p>Golden crispy chicken with our special sauce.</p>
+
+                    <div class="food-bottom">
+                        <strong>$9.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="4"
+                            data-name="Crispy Chicken Burger"
+                            data-price="9">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="local">
+                <div class="food-image gradient-five">🥘</div>
+                <div class="food-info">
+                    <span class="food-category">Local Dishes</span>
+                    <h3>Nyama Choma Platter</h3>
+                    <p>Grilled meat served with fresh sides.</p>
+
+                    <div class="food-bottom">
+                        <strong>$15.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="5"
+                            data-name="Nyama Choma Platter"
+                            data-price="15">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="food-card" data-category="drinks">
+                <div class="food-image gradient-six">🥤</div>
+                <div class="food-info">
+                    <span class="food-category">Drinks</span>
+                    <h3>Fresh Mango Juice</h3>
+                    <p>Sweet, refreshing, and freshly blended.</p>
+
+                    <div class="food-bottom">
+                        <strong>$4.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="6"
+                            data-name="Fresh Mango Juice"
+                            data-price="4">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="empty-message" class="empty-message" hidden>
+            No food found. Try a different search or category.
+        </p>
+    </section>
+
+    <!-- RESTAURANTS -->
+    <section id="restaurants" class="section">
+        <h2 class="section-title">Featured <span>Restaurants</span></h2>
+
+        <p class="section-description">
+            Discover the kinds of places that make food unforgettable.
+        </p>
+
+        <div class="restaurants-container">
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍔</div>
+                <h3>Burger House</h3>
+                <p>Fresh burgers and delicious sides.</p>
+                <span>⭐ 4.8 / 5</span>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍕</div>
+                <h3>Pizza Corner</h3>
+                <p>Hot, cheesy pizzas made for sharing.</p>
+                <span>⭐ 4.7 / 5</span>
+            </div>
+
+            <div class="restaurant-card">
+                <div class="restaurant-icon">🍛</div>
+                <h3>Swahili Kitchen</h3>
+                <p>Traditional flavors and comforting meals.</p>
+                <span>⭐ 4.9 / 5</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2 class="section-title">About <span>Foodie</span></h2>
+
+        <div class="about-box">
+            <h3>Good Food. Good Mood.</h3>
+
+            <p>
+                Foodie is a demo food ordering website designed
+                to showcase modern frontend development.
+            </p>
+
+            <p>
+                It uses HTML and CSS for layout and design,
+                while JavaScript powers searching, filtering,
+                and interactive order management.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+
+        <div class="contact-box">
+            <h3>Hungry for something awesome? 🚀</h3>
+
+            <p>
+                This is a frontend demo project.
+                Explore the menu and try building an order!
+            </p>
+
+            <a href="mailto:blancokibweja@gmail.com"
+                class="btn primary-btn">
+                Contact Developer
+            </a>
+        </div>
+    </section>
+
+    <!-- ORDER PANEL -->
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <aside id="cart-panel" class="cart-panel"
+        aria-label="Your order" aria-hidden="true">
+
+        <div class="cart-header">
+            <h2>Your <span>Order</span></h2>
+            <button type="button" id="close-cart"
+                class="close-cart" aria-label="Close order">
+                ✕
+            </button>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+            <p class="cart-empty">Your order is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">$0.00</strong>
+            </div>
+
+            <button type="button" id="clear-cart"
+                class="btn secondary-btn">
+                Clear Order
+            </button>
+
+            <p class="cart-note">
+                Demo only — no real food orders or payments.
+            </p>
+        </div>
+    </aside>
+
+    <!-- FOOTER -->
     <footer>
-        <p>if you want any thing contact us</p>
+        <p>© 2026 Foodie | BilyBlanco</p>
+        <p>Made with ❤️ using HTML, CSS & JavaScript</p>
     </footer>
+
 </body>
+</html>
