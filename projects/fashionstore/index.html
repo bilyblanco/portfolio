@@ -1,121 +1,290 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store | BilyBlanco</title>
+    <title>Fashion Store | BilyBlanco</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <header>
-        <div class="Nav-Bar">
-        <a href="index.html" id="navbar-title">Fashion Store</a>
-        <a href="../../index.html" class="back-btn">
-            ← Back to Portfolio
-        </a>
-        </div>
+        <nav class="navbar">
+            <a href="#home" class="logo">Fashion<span>Store.</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="../../index.html" class="portfolio-link">
+                    My<span>Portfolio.</span>
+                </a>
+
+                <button type="button" id="cart-button" class="cart-button">
+                    🛒 Cart <span id="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <div class="categories">
-                <div class="cat-item">
-                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRBaF47ZawZY8OcwXNnX6RUXBD67tlo1stbond-buy5oeurl3P5zmDxpEmF0o353CZ7Lh33xlTYQF6zww7xbIFbOE462ZdZ4o09OXkhyY7bvTNQ3IvdLsnDfKEw4bcpuPYS4nqdun0&usqp=CAc" alt="T-Shirts">
-                    <a href="#t-shirts" target="_self">T-Shirts</a>
-                </div>
-                <div class="cat-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bxPHHXL7LXM9agk37u54oTFdk8UFBh8j8k6E4qIxcw&s=10" alt="Sun Glasses">
-                    <a href="#sun-glasses" target="_self">Sun Glasses</a>
-                </div>
-                <div class="cat-item">
-                    <img src="https://m.media-amazon.com/images/I/71Otn4nA5WL._AC_SX569_.jpg" alt="Shirts">
-                    <a href="#shirts" target="_self">Shirts</a>
-                </div>
-                <div class="cat-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJvtk34LD52boC-dUZn-W83sLJfF9IaiILMFi73_yObXrN5zuqVDSyW38&s=10" alt="Shoes">
-                    <a href="#shoes" target="_self">Shoes</a>
-                </div>
-                <div class="cat-item">
-                    <img src="https://www.untuckit.com/cdn/shop/files/12_PANT-FLATLAY_SP1-24_BGOLDSTEIN_2180_91178e67-9314-4a84-a9cd-2bba7177341f.jpg?height=1000&v=1759431666" alt="Pants">
-                    <a href="#pants" target="_self">Pants</a>
-                </div>
-                <div class="cat-item">
-                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRe5pUQrzgYXP_g3PHFnVXrEY3f4v9P5uqm182Zj5HyIYAzJDO6nz68cGeM_Y0rOnLO_3JL-eVTIorgtiB6K7NHvPUhEeDQyWAMU0bbmgV39HW-O4femsUjzbJ0FVPbz__yVE2utE8JDw&usqp=CAc" alt="Perfumes">
-                    <a href="#perfumes" target="_self">Perfumes</a>
-                </div>
-            </div>
-        </section>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting">✨ Welcome to Fashion Store!</p>
 
-        <section class="hero-banner">
-            <div>
-            <a href="https://mlimanicity.co.tz/" target="_blank">
-                <img src="https://cdn.codechef.com/download/Contest+images/ROTEST/shopingtime.jpeg" alt="Happy Customer">
+            <h1>Find Your <span>Perfect Style.</span></h1>
+
+            <h2>Fashion that speaks for you.</h2>
+
+            <p class="hero-description">
+                Discover fresh looks, everyday essentials, and
+                statement pieces. Explore our collection and
+                build a wardrobe you'll love.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#products" class="btn primary-btn">Shop Collection</a>
+                <a href="#about" class="btn secondary-btn">Discover More</a>
+            </div>
+        </div>
+
+        <div class="hero-art">
+            <div class="art-circle">
+                <span>🛍️</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section">
+        <h2 class="section-title">Shop by <span>Category</span></h2>
+
+        <p class="section-description">
+            Whatever your vibe, we've got something for you.
+        </p>
+
+        <div class="categories-container">
+            <a href="#products" class="category-card" data-category="men">
+                <span>👔</span>
+                <h3>Men's Fashion</h3>
+                <p>Modern everyday essentials</p>
             </a>
-            </div>
 
-            <div>
-            <h2 class="table-title">Our Upcoming Sales</h2>
-                <div class="sales-table-container">
-                <table class="sales-table">
-                    <tr>
-                        <th>Festival</th>
-                        <th>Discount</th>
-                        <th>Starting Date</th>
-                        <th>Ending Date</th>
-                    </tr>
-                    <tr>
-                        <td>Independence Day</td>
-                        <td><span class="old-price">30%</span>40%</td>
-                        <td>10 August</td>
-                        <td>18 August</td>
-                    </tr>
-                    <tr>
-                        <td>Diwali</td>
-                        <td><span class="old-price">50%</span>60%</td>
-                        <td>10 November</td>
-                        <td>21 November</td>
-                    </tr>
-                    <tr>
-                        <td>Christmas</td>
-                        <td><span class="old-price">35%</span>50%</td>
-                        <td>20 December</td>
-                        <td>26 December</td>
-                    </tr>
-                    <tr>
-                        <td>New Year</td>
-                        <td><span class="old-price">60%</span>75%</td>
-                        <td>30 December</td>
-                        <td>6 January</td>
-                    </tr>
-                </table>
+            <a href="#products" class="category-card" data-category="women">
+                <span>👗</span>
+                <h3>Women's Fashion</h3>
+                <p>Bold looks and timeless pieces</p>
+            </a>
+
+            <a href="#products" class="category-card" data-category="accessories">
+                <span>🕶️</span>
+                <h3>Accessories</h3>
+                <p>Finish your look in style</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+        <h2 class="section-title">Featured <span>Products</span></h2>
+
+        <p class="section-description">
+            Pick your favorites and add them to your cart.
+        </p>
+
+        <div class="filter-buttons">
+            <button type="button" class="filter-btn active" data-filter="all">
+                All
+            </button>
+            <button type="button" class="filter-btn" data-filter="men">
+                Men
+            </button>
+            <button type="button" class="filter-btn" data-filter="women">
+                Women
+            </button>
+            <button type="button" class="filter-btn" data-filter="accessories">
+                Accessories
+            </button>
+        </div>
+
+        <div class="products-container">
+
+            <article class="product-card" data-category="men">
+                <div class="product-image gradient-one">👕</div>
+                <div class="product-info">
+                    <span class="product-category">Men</span>
+                    <h3>Classic T-Shirt</h3>
+                    <p>Comfortable, simple, and easy to style.</p>
+                    <div class="product-bottom">
+                        <strong>$25.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="1" data-name="Classic T-Shirt" data-price="25">
+                            Add to Cart
+                        </button>
+                    </div>
                 </div>
+            </article>
+
+            <article class="product-card" data-category="women">
+                <div class="product-image gradient-two">👗</div>
+                <div class="product-info">
+                    <span class="product-category">Women</span>
+                    <h3>Summer Dress</h3>
+                    <p>A fresh look for sunny days.</p>
+                    <div class="product-bottom">
+                        <strong>$45.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="2" data-name="Summer Dress" data-price="45">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories">
+                <div class="product-image gradient-three">🕶️</div>
+                <div class="product-info">
+                    <span class="product-category">Accessories</span>
+                    <h3>Stylish Sunglasses</h3>
+                    <p>Complete your outfit with confidence.</p>
+                    <div class="product-bottom">
+                        <strong>$20.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="3" data-name="Stylish Sunglasses" data-price="20">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="men">
+                <div class="product-image gradient-four">👖</div>
+                <div class="product-info">
+                    <span class="product-category">Men</span>
+                    <h3>Denim Jeans</h3>
+                    <p>Everyday denim with a modern fit.</p>
+                    <div class="product-bottom">
+                        <strong>$55.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="4" data-name="Denim Jeans" data-price="55">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="women">
+                <div class="product-image gradient-five">👜</div>
+                <div class="product-info">
+                    <span class="product-category">Women</span>
+                    <h3>Everyday Handbag</h3>
+                    <p>Practical, elegant, and ready to go.</p>
+                    <div class="product-bottom">
+                        <strong>$60.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="5" data-name="Everyday Handbag" data-price="60">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="accessories">
+                <div class="product-image gradient-six">⌚</div>
+                <div class="product-info">
+                    <span class="product-category">Accessories</span>
+                    <h3>Minimalist Watch</h3>
+                    <p>A clean finishing touch for any look.</p>
+                    <div class="product-bottom">
+                        <strong>$75.00</strong>
+                        <button type="button" class="add-to-cart"
+                            data-id="6" data-name="Minimalist Watch" data-price="75">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <p id="empty-message" class="empty-message" hidden>
+            No products found in this category.
+        </p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2 class="section-title">About <span>Our Store</span></h2>
+
+        <div class="about-box">
+            <h3>Style Meets Simplicity</h3>
+            <p>
+                Fashion Store is a demo shopping website created to
+                practice modern frontend development.
+            </p>
+            <p>
+                It combines responsive HTML and CSS with JavaScript
+                features such as product filtering and shopping cart
+                management.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Stay <span>Connected</span></h2>
+
+        <div class="contact-box">
+            <h3>Got a question? 💬</h3>
+            <p>
+                This is a demo store. Feel free to explore the products
+                and test the shopping cart!
+            </p>
+            <a href="mailto:blancokibweja@gmail.com" class="btn primary-btn">
+                Contact Developer
+            </a>
+        </div>
+    </section>
+
+    <!-- CART PANEL -->
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <aside id="cart-panel" class="cart-panel" aria-label="Shopping cart"
+        aria-hidden="true">
+        <div class="cart-header">
+            <h2>Your <span>Cart</span></h2>
+            <button type="button" id="close-cart" class="close-cart"
+                aria-label="Close cart">✕</button>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+            <p class="cart-empty">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">$0.00</strong>
             </div>
-        </section>
+            <button type="button" id="clear-cart" class="btn secondary-btn">
+                Clear Cart
+            </button>
+            <p class="cart-note">Demo store — no checkout or payments.</p>
+        </div>
+    </aside>
 
-        <section class="contents">
-
-            <h3>Store: The One-stop Fashion Destination</h3>
-            <p>Stepping out and finding a perfect fashion choice is difficult? Why worry when you have your own Fashion Store at home where you can browse through thousands of choices and you can order clothes according to your liking. Don't worry if you don't like the item after you receive it, you can always consider the option for exchanging your item or even you can return your item and you will get the full amount back. Isn't that amazing? Start searching for your desired clothes and see it yourself. Once you are done with your first shopping, we are very sure that you will continue that in future as well and we will try our best to give you more and more choices so that you can have a variety of clothes to choose from and so you can find one which suits you the best.</p>
-            <p>What makes us Great? Well few things are listed below:</p>
-
-            <h4>Festival Sales</h4>
-            <p>We keep coming with different sales on our Indian Festivals where we offer huge discounts on your favorite clothes. If you want to get the notifications of all our future sales then you can subscribe to us and we will make sure that you will not miss any offer in future so that you can get your favorite cloth at the best possible price.</p>
-            <p>Some of our favorite sales are listed below;</p>
-            <ul>
-                <li>Independence day sale</li>
-                <li>Diwali sale</li>
-                <li>Cristmas day sale</li>
-                <li>New Year sale</li>
-            </ul>
-
-            <h4>Payment Options</h4>
-            <p>We support a large variety of payment options so that you won't miss a cloth due to unavailability of any payment option. You can use a debit card or your credit card to make the payment. Also, you can directly use your UPI ID to make the payment. We also provide EMI options if you think you can not afford a complete amount at once. Other than that, you can directly make your payment through your bank details and even if you are not sure or you are in doubt then you can choose the Cash option where you can pay the amount in cash to our partner who will be delivering your cloth at your doorstep.</p>
-        </section>
-    </main>
-
+    <!-- FOOTER -->
     <footer>
-        &copy; 2012-2013 Fashionstore.com
-    </footer> 
+        <p>© 2026 Fashion Store | BilyBlanco</p>
+        <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+    </footer>
+
 </body>
 </html>
