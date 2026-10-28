@@ -244,7 +244,7 @@ header {
 /* SKILLS */
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 45px;
 }
@@ -618,3 +618,190 @@ nav a.nav-active {
         height: 220px;
     }
 }
+
+/* ==========================================
+   FINAL PORTFOLIO JAVASCRIPT UPGRADES
+   Add this at the END of style.css
+========================================== */
+
+/* 1. MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid #a855f7;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 6px 13px;
+    font-family: inherit;
+    font-size: 25px;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+/* 2. TYPING ANIMATION */
+
+.typing-cursor {
+    color: #a855f7;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#typing-text {
+    color: #e2e8f0;
+}
+
+/* 3. PROJECT FILTER BUTTONS */
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 auto 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 1px solid #a855f7;
+    border-radius: 25px;
+    background: #1b1d36;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-3px);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #9333ea, #ec4899);
+    border-color: transparent;
+}
+
+.project-count {
+    color: #a8aec7;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Keep hidden project cards hidden even though
+   .project-card has its own CSS styling. */
+
+.project-card[hidden] {
+    display: none !important;
+}
+
+/* 4. FOCUS STYLES */
+
+.menu-toggle:focus-visible,
+.filter-btn:focus-visible {
+    outline: 3px solid #67e8f9;
+    outline-offset: 4px;
+}
+
+/* 5. MOBILE NAVIGATION */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 5%;
+        right: 5%;
+        z-index: 200;
+
+        background: #1b1d36;
+        border: 1px solid #ffffff20;
+        border-radius: 0 0 15px 15px;
+        padding: 20px;
+
+        box-shadow: 0 15px 30px #00000055;
+    }
+
+    .navbar .nav-links.menu-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .navbar .nav-links a:hover {
+        background: #ffffff10;
+        border-radius: 8px;
+    }
+}
+
+/* 6. SMALL MOBILE SCREENS */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .filter-btn {
+        padding: 9px 13px;
+        font-size: 12px;
+    }
+
+    .project-filters {
+        gap: 8px;
+    }
+}
+
+/* 7. REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .typing-cursor {
+        animation: none;
+    }
+
+    .filter-btn {
+        transition: none;
+    }
+}
+
