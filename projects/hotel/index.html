@@ -1,129 +1,376 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel | BilyBlanco</title>
+    <title>Chef's Hotels | BilyBlanco</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-    <header id="home">
-        <nav class="hotel-nav">
-            <a href="../../index.html" class="back-btn">
-                ← Back to Portfolio
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">Chef's<span>Hotels.</span></a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#amenities">Amenities</a>
+                <a href="#booking">Booking</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <a href="../../index.html" class="portfolio-link">
+                My<span>Portfolio.</span>
             </a>
         </nav>
-        <h1>Welcome To Chef's Hotels!</h1>
-        <h2>Indulge in <br> Unparalled Luxury</h2>
-        <p>"Step into our world of boundless elegance, where dreams take flight and every moment<br>is a cherished delight. Welcome to a sanctuary of serenity, where opulence meets<br>warmth and extraordinary memories find their way. Embrace the enchantment, as we<br>ensure your comfort, joy, and dreams become our utmost art."</p>
     </header>
 
-    <main>
-        <section>
-            <h3>Type of Rooms</h3>
-            <table class="rooms-table">
-                <tr>
-                    <th>Type</th>
-                    <th>Option</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>
-                        <img src="https://cdn.codechef.com/download/Contest+images/ANTEST/luxury.jpg" alt="Luxury Hotel"><br>
-                        <b>Standard</b>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Free Breakfast</li>
-                            <li>Free Lunch</li>
-                            <li>Free Dinner</li>
-                        </ul>
-                    </td>
-                    <td>Per Night<br>Rs 8000</td>
-                </tr>
-            </table>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="greeting">✨ Welcome to Chef's Hotels!</p>
 
-            <table class="rooms-table">
-                <tr>
-                    <th>Type</th>
-                    <th>Option</th>
-                    <th>Price</th>
-                </tr>
-               <tr>
-                    <td>
-                        <img src="https://cdn.codechef.com/download/Contest+images/ANTEST/business.jpg" alt="Business"><br>
-                        <b>Business</b>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Free Access to conference rooms</li>
-                            <li>Free Breakfast</li>
-                            <li>Free Lunch</li>
-                            <li>Free Dinner</li>
-                        </ul>
-                    </td>
-                    <td>Per Night<br>Rs 10000</td>
-                </tr>
-            </table>
+            <h1>Stay in <span>Style & Comfort.</span></h1>
 
-            <table class="rooms-table">
-                <tr>
-                    <th>Type</th>
-                    <th>Option</th>
-                    <th>Price</th>
-                </tr>
-              <tr>
-                    <td>
-                        <img src="https://cdn.codechef.com/download/Contest+images/ANTEST/resort.jpeg" alt="Luxury"><br>
-                        <b>Luxury</b>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Free Access to conference rooms</li>
-                            <li>Free Pool acess</li>
-                            <li>Free Breakfast</li>
-                            <li>Free Lunch</li>
-                            <li>Free Dinner</li>
-                        </ul>
-                    </td>
-                    <td>Per Night<br>Rs 8000</td>
-                </tr>
-            </table>
-        </section>
+            <h2>Your perfect getaway starts here.</h2>
 
-        <section id="bookings">
-            <h3>Book Your Favorite Room</h3>
-            <form action="submit_booking.php" method="post">
-                <label for="name">Your Beautiful Name:</label>
-                <input type="text" id="name" name="name" required>
+            <p class="hero-description">
+                Discover beautifully designed rooms, thoughtful
+                amenities, and a relaxing atmosphere. Whether
+                you're traveling for business or pleasure,
+                there's a perfect room waiting for you.
+            </p>
 
-                <label for="email">Your Email Address:</label>
-                <input type="email" id="email" name="email" required>
+            <div class="hero-buttons">
+                <a href="#rooms" class="btn primary-btn">
+                    Explore Rooms
+                </a>
 
-                <label for="phone">Your Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <a href="#booking" class="btn secondary-btn">
+                    Book Your Stay
+                </a>
+            </div>
+        </div>
 
-                <label for="room">Select Your Favorite Room:</label>
-                <select name="room" id="room" required>
-                    <option value="">--No option will ever dissapoint</option>
-                    <option value="standard">Standard Room</option>
-                    <option value="business">Business Room</option>
-                    <option value="luxury">Luxury Room</option>
-                </select>
+        <div class="hero-art">
+            <div class="art-circle">
+                <span>🏨</span>
+            </div>
+        </div>
+    </section>
 
-                <label for="date">Your Prefered Date:</label>
-                <input type="date" id="date" name="date" required>
+    <!-- ROOMS -->
+    <section id="rooms" class="section">
+        <h2 class="section-title">Our <span>Rooms</span></h2>
 
-                <button type="submit">Enjoy Your Stay!</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>
-            &copy; 2023 Hrishikesh Kelkar's page. All rights reserved.<br>Send us your feedback at help@codechef.com
+        <p class="section-description">
+            Choose a room that matches your comfort and budget.
         </p>
-    </footer> 
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all"
+                type="button">All Rooms</button>
+
+            <button class="filter-btn" data-filter="standard"
+                type="button">Standard</button>
+
+            <button class="filter-btn" data-filter="deluxe"
+                type="button">Deluxe</button>
+
+            <button class="filter-btn" data-filter="suite"
+                type="button">Suites</button>
+        </div>
+
+        <div class="rooms-container">
+
+            <article class="room-card" data-category="standard">
+                <div class="room-image gradient-one">🛏️</div>
+                <div class="room-info">
+                    <span class="room-category">Standard</span>
+                    <h3>Classic Room</h3>
+                    <p>
+                        A cozy space with everything you need
+                        for a comfortable stay.
+                    </p>
+                    <div class="room-details">
+                        <span>👥 2 Guests</span>
+                        <span>📶 Free Wi-Fi</span>
+                    </div>
+                    <div class="room-bottom">
+                        <strong>$80 <small>/ night</small></strong>
+                        <button class="book-room" type="button"
+                            data-room="classic">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card" data-category="deluxe">
+                <div class="room-image gradient-two">🌅</div>
+                <div class="room-info">
+                    <span class="room-category">Deluxe</span>
+                    <h3>Deluxe Room</h3>
+                    <p>
+                        Extra space, stylish interiors, and
+                        a relaxing atmosphere.
+                    </p>
+                    <div class="room-details">
+                        <span>👥 2 Guests</span>
+                        <span>☕ Breakfast</span>
+                    </div>
+                    <div class="room-bottom">
+                        <strong>$140 <small>/ night</small></strong>
+                        <button class="book-room" type="button"
+                            data-room="deluxe">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card" data-category="suite">
+                <div class="room-image gradient-three">👑</div>
+                <div class="room-info">
+                    <span class="room-category">Suite</span>
+                    <h3>Executive Suite</h3>
+                    <p>
+                        Premium comfort with elegant furnishings
+                        and generous living space.
+                    </p>
+                    <div class="room-details">
+                        <span>👥 4 Guests</span>
+                        <span>🛋️ Living Area</span>
+                    </div>
+                    <div class="room-bottom">
+                        <strong>$250 <small>/ night</small></strong>
+                        <button class="book-room" type="button"
+                            data-room="executive">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card" data-category="standard">
+                <div class="room-image gradient-four">🌿</div>
+                <div class="room-info">
+                    <span class="room-category">Standard</span>
+                    <h3>Garden Room</h3>
+                    <p>
+                        A peaceful room inspired by nature
+                        and simple modern design.
+                    </p>
+                    <div class="room-details">
+                        <span>👥 2 Guests</span>
+                        <span>🌳 Garden View</span>
+                    </div>
+                    <div class="room-bottom">
+                        <strong>$95 <small>/ night</small></strong>
+                        <button class="book-room" type="button"
+                            data-room="garden">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card" data-category="deluxe">
+                <div class="room-image gradient-five">🌊</div>
+                <div class="room-info">
+                    <span class="room-category">Deluxe</span>
+                    <h3>Ocean View Room</h3>
+                    <p>
+                        Enjoy spacious accommodation with
+                        a beautiful coastal atmosphere.
+                    </p>
+                    <div class="room-details">
+                        <span>👥 2 Guests</span>
+                        <span>🌊 Ocean View</span>
+                    </div>
+                    <div class="room-bottom">
+                        <strong>$175 <small>/ night</small></strong>
+                        <button class="book-room" type="button"
+                            data-room="ocean">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="room-card" data-category="suite">
+                <div class="room-image gradient-six">💎</div>
+                <div class="room-info">
+                    <span class="room-category">Suite</span>
+                    <h3>Presidential Suite</h3>
+                    <p>
+                        Our most luxurious experience,
+                        designed for unforgettable stays.
+                    </p>
+                    <div class="room-details">
+                        <span>👥 4 Guests</span>
+                        <span>✨ Premium Luxury</span>
+                    </div>
+                    <div class="room-bottom">
+                        <strong>$400 <small>/ night</small></strong>
+                        <button class="book-room" type="button"
+                            data-room="presidential">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- AMENITIES -->
+    <section id="amenities" class="section">
+        <h2 class="section-title">Hotel <span>Amenities</span></h2>
+
+        <p class="section-description">
+            Everything you need for an enjoyable stay.
+        </p>
+
+        <div class="amenities-container">
+            <div class="amenity-card">
+                <div class="amenity-icon">🏊</div>
+                <h3>Swimming Pool</h3>
+                <p>Relax and enjoy a refreshing swim.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-icon">🍽️</div>
+                <h3>Restaurant</h3>
+                <p>Delicious meals and dining experiences.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-icon">📶</div>
+                <h3>Free Wi-Fi</h3>
+                <p>Stay connected throughout your visit.</p>
+            </div>
+
+            <div class="amenity-card">
+                <div class="amenity-icon">💪</div>
+                <h3>Fitness Center</h3>
+                <p>Keep up with your daily workout routine.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="section">
+        <h2 class="section-title">Book Your <span>Stay</span></h2>
+
+        <p class="section-description">
+            Select your room and dates to calculate your stay.
+        </p>
+
+        <div class="booking-box">
+            <form id="booking-form">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="guest-name">Full Name</label>
+                        <input type="text" id="guest-name"
+                            placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guest-email">Email Address</label>
+                        <input type="email" id="guest-email"
+                            placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="room-type">Room Type</label>
+                        <select id="room-type" required>
+                            <option value="">Choose a room</option>
+                            <option value="classic">Classic Room — $80</option>
+                            <option value="deluxe">Deluxe Room — $140</option>
+                            <option value="executive">Executive Suite — $250</option>
+                            <option value="garden">Garden Room — $95</option>
+                            <option value="ocean">Ocean View Room — $175</option>
+                            <option value="presidential">Presidential Suite — $400</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests" required>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="check-in">Check-in Date</label>
+                        <input type="date" id="check-in" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="check-out">Check-out Date</label>
+                        <input type="date" id="check-out" required>
+                    </div>
+                </div>
+
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <p>Room: <span id="summary-room">Not selected</span></p>
+                    <p>Nights: <span id="summary-nights">0</span></p>
+                    <p>Guests: <span id="summary-guests">1</span></p>
+                    <div class="summary-total">
+                        <span>Estimated Total</span>
+                        <strong id="summary-total">$0.00</strong>
+                    </div>
+                </div>
+
+                <p id="booking-message" class="booking-message"
+                    role="status" aria-live="polite"></p>
+
+                <button type="submit" class="btn primary-btn submit-btn">
+                    Confirm Demo Booking
+                </button>
+
+                <p class="demo-note">
+                    Demo only — no real reservations or payments are made.
+                </p>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Get in <span>Touch</span></h2>
+
+        <div class="contact-box">
+            <h3>Questions about the project? 💬</h3>
+
+            <p>
+                Chef's Hotels is a frontend demo created
+                using HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="mailto:blancokibweja@gmail.com"
+                class="btn primary-btn">
+                Contact Developer
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Chef's Hotels | BilyBlanco</p>
+        <p>Made with ❤️ using HTML, CSS & JavaScript</p>
+    </footer>
+
 </body>
 </html>
