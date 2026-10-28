@@ -284,6 +284,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updateActiveNavigation();
     }
+    
+    // ========================================
+    // 7. DARK / LIGHT THEME TOGGLE
+    // ========================================
+
+    const themeToggle = document.getElementById("theme-toggle");
+
+    const systemTheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+    );
+
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+
+        if (themeToggle) {
+            const isDark = theme === "dark";
+
+            themeToggle.textContent = isDark ? "☀️" : "🌙";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                isDark ? "Switch to light mode" : "Switch to dark mode"
+            );
+
+            themeToggle.title =
+                isDark ? "Switch to light mode" : "Switch to dark mode";
+        }
+    }
+
+    applyTheme(
+        savedTheme === "dark" || savedTheme === "light"
+            ? savedTheme
+            : systemTheme.matches ? "dark" : "light"
+    );
+
+    if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+            const currentTheme =
+                document.documentElement.getAttribute("data-theme");
+
+            const newTheme =
+                currentTheme === "dark" ? "light" : "dark";
+
+            applyTheme(newTheme);
+            localStorage.setItem("portfolio-theme", newTheme);
+        });
+    }
+
+    systemTheme.addEventListener("change", (event) => {
+        if (!localStorage.getItem("portfolio-theme")) {
+            applyTheme(event.matches ? "dark" : "light");
+        }
+    });
+
 
 });
 
