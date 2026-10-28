@@ -1,0 +1,57 @@
+
+/* ==========================================
+   SHARED THEME SYSTEM
+========================================== */
+
+:root {
+    --theme-bg: #0f1021;
+    --theme-surface: #1b1d36;
+    --theme-text: #ffffff;
+    --theme-muted: #a8aec7;
+    --theme-border: rgba(255, 255, 255, 0.1);
+    --theme-accent: #a855f7;
+}
+
+html[data-theme="light"] {
+    --theme-bg: #f8fafc;
+    --theme-surface: #ffffff;
+    --theme-text: #0f172a;
+    --theme-muted: #475569;
+    --theme-border: #e2e8f0;
+    --theme-accent: #9333ea;
+}
+
+.shared-theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--theme-accent);
+    border-radius: 50%;
+
+    background: var(--theme-surface);
+    color: var(--theme-text);
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.shared-theme-toggle:hover {
+    transform: rotate(15deg);
+}
+
+.shared-theme-toggle:focus-visible {
+    outline: 3px solid #67e8f9;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .shared-theme-toggle {
+        transition: none;
+    }
+}

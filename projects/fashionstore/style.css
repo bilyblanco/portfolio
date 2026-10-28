@@ -716,3 +716,189 @@ footer p {
     }
 }
 
+/* ==========================================
+   FASHION STORE — LIGHT MODE
+========================================== */
+
+/* PAGE BACKGROUND AND TEXT */
+
+html[data-theme="light"] body {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+/* NAVIGATION */
+
+html[data-theme="light"] header {
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom-color: #e2e8f0;
+}
+
+html[data-theme="light"] .nav-links a,
+html[data-theme="light"] .portfolio-link {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .nav-links a:hover,
+html[data-theme="light"] .portfolio-link:hover {
+    color: #9333ea;
+}
+
+html[data-theme="light"] .cart-button {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+/* HERO */
+
+html[data-theme="light"] .hero h2 {
+    color: #334155;
+}
+
+html[data-theme="light"] .hero-description {
+    color: #475569;
+}
+
+html[data-theme="light"] .greeting {
+    color: #0e7490;
+}
+
+html[data-theme="light"] .secondary-btn {
+    color: #0f172a;
+}
+
+/* SECTION DESCRIPTIONS */
+
+html[data-theme="light"] .section-description {
+    color: #475569;
+}
+
+/* CATEGORY AND PRODUCT CARDS */
+
+html[data-theme="light"] .category-card,
+html[data-theme="light"] .product-card,
+html[data-theme="light"] .about-box {
+    background: #ffffff;
+    border-color: #e2e8f0;
+}
+
+html[data-theme="light"] .category-card p,
+html[data-theme="light"] .product-info p,
+html[data-theme="light"] .about-box p {
+    color: #475569;
+}
+
+html[data-theme="light"] .about-box h3,
+html[data-theme="light"] .section-title span,
+html[data-theme="light"] .product-bottom strong {
+    color: #7e22ce;
+}
+
+html[data-theme="light"] .product-category {
+    color: #0e7490;
+}
+
+/* PRODUCT FILTERS */
+
+html[data-theme="light"] .filter-btn {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+html[data-theme="light"] .filter-btn:hover,
+html[data-theme="light"] .filter-btn.active {
+    background: linear-gradient(135deg, #9333ea, #ec4899);
+    color: #ffffff;
+}
+
+html[data-theme="light"] .empty-message {
+    color: #475569;
+}
+
+/* CONTACT */
+
+html[data-theme="light"] .contact-box {
+    background: linear-gradient(135deg, #ede9fe, #fce7f3);
+}
+
+html[data-theme="light"] .contact-box h3 {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .contact-box p {
+    color: #475569;
+}
+
+/* SHOPPING CART PANEL */
+
+html[data-theme="light"] .cart-panel {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+html[data-theme="light"] .close-cart {
+    color: #0f172a;
+}
+
+html[data-theme="light"] .cart-empty,
+html[data-theme="light"] .cart-item p,
+html[data-theme="light"] .cart-note {
+    color: #475569;
+}
+
+html[data-theme="light"] .cart-item {
+    border-bottom-color: #e2e8f0;
+}
+
+html[data-theme="light"] .cart-footer {
+    border-top-color: #e2e8f0;
+}
+
+html[data-theme="light"] .cart-item-actions button {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #a855f7;
+}
+
+html[data-theme="light"] .cart-item-actions .remove-item {
+    border-color: #ec4899;
+}
+
+html[data-theme="light"] .cart-total strong,
+html[data-theme="light"] .cart-header span {
+    color: #7e22ce;
+}
+
+/* FOOTER */
+
+html[data-theme="light"] footer {
+    background: #e2e8f0;
+    border-top-color: #cbd5e1;
+}
+
+html[data-theme="light"] footer p {
+    color: #475569;
+}
+
+/* KEEP ACTION BUTTONS READABLE */
+
+html[data-theme="light"] .primary-btn,
+html[data-theme="light"] .add-to-cart {
+    color: #ffffff;
+}
+
+/* THEME BUTTON */
+
+.nav-actions .shared-theme-toggle {
+    flex-shrink: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .nav-actions {
+        gap: 12px;
+    }
+}
+
+
