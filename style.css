@@ -408,6 +408,106 @@ footer p {
     margin-bottom: 5px;
 }
 
+/* ========================================
+   JAVASCRIPT PORTFOLIO ENHANCEMENTS
+======================================== */
+
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 999;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: white;
+
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.35);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+.back-to-top:focus-visible {
+    outline: 3px solid #67e8f9;
+    outline-offset: 4px;
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ACTIVE NAVIGATION */
+
+nav a.nav-active {
+    color: #c084fc;
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .back-to-top {
+        transition: none;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 23px;
+    }
+}
+
 /* TABLET */
 @media (max-width: 900px) {
     .skills-container {
