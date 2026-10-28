@@ -1,15 +1,168 @@
 
 "use strict";
 
-// ========================================
-// BILYBLANCO PORTFOLIO INTERACTIONS
-// ========================================
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ====================================
-    // 1. BACK TO TOP BUTTON
-    // ====================================
+    // ========================================
+    // 1. MOBILE NAVIGATION
+    // ========================================
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    function closeMenu() {
+        if (!menuToggle || !navLinks) return;
+
+        navLinks.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+    }
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("menu-open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
+        });
+
+        document.addEventListener("click", (event) => {
+            if (
+                !navLinks.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) closeMenu();
+        });
+    }
+
+
+    // ========================================
+    // 2. TYPING ANIMATION
+    // ========================================
+
+    const typingText = document.getElementById("typing-text");
+
+    const roles = [
+        "Creative Web Developer",
+        "Frontend Developer",
+        "JavaScript Learner",
+        "Web Designer"
+    ];
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (typingText && !reducedMotion) {
+        let roleIndex = 0;
+        let characterIndex = roles[0].length;
+        let deleting = true;
+
+        function typeRole() {
+            const currentRole = roles[roleIndex];
+
+            if (deleting) {
+                characterIndex--;
+            } else {
+                characterIndex++;
+            }
+
+            typingText.textContent =
+                currentRole.slice(0, characterIndex);
+
+            let delay = deleting ? 65 : 110;
+
+            if (!deleting && characterIndex === currentRole.length) {
+                delay = 1600;
+                deleting = true;
+            } else if (deleting && characterIndex === 0) {
+                roleIndex = (roleIndex + 1) % roles.length;
+                deleting = false;
+                delay = 350;
+            }
+
+            setTimeout(typeRole, delay);
+        }
+
+        setTimeout(typeRole, 1800);
+    }
+
+
+    // ========================================
+    // 3. PROJECT FILTERING
+    // ========================================
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(
+        ".projects-container .project-card"
+    );
+
+    const projectCount = document.getElementById("project-count");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const selectedCategory = button.dataset.filter;
+
+            filterButtons.forEach((item) => {
+                const isActive = item === button;
+
+                item.classList.toggle("active", isActive);
+                item.setAttribute(
+                    "aria-pressed",
+                    String(isActive)
+                );
+            });
+
+            let visibleCount = 0;
+
+            projectCards.forEach((card) => {
+                const matches =
+                    selectedCategory === "all" ||
+                    card.dataset.category === selectedCategory;
+
+                card.hidden = !matches;
+
+                if (matches) visibleCount++;
+            });
+
+            if (projectCount) {
+                projectCount.textContent =
+                    `Showing ${visibleCount} ` +
+                    (visibleCount === 1 ? "project" : "projects");
+            }
+        });
+    });
+
+    filterButtons.forEach((button) => {
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("active"))
+        );
+    });
+
+
+    // ========================================
+    // 4. BACK TO TOP BUTTON
+    // ========================================
 
     const backToTop = document.createElement("button");
 
@@ -31,9 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     backToTop.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
-            behavior: window.matchMedia(
-                "(prefers-reduced-motion: reduce)"
-            ).matches ? "auto" : "smooth"
+            behavior: reducedMotion ? "auto" : "smooth"
         });
     });
 
@@ -44,34 +195,27 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBackToTop();
 
 
-    // ====================================
-    // 2. SCROLL REVEAL ANIMATIONS
-    // ====================================
-
-    const reducedMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
+    // ========================================
+    // 5. SCROLL REVEAL
+    // ========================================
 
     const revealElements = document.querySelectorAll(
-        "section, .project-card, .skill-card"
+        ".about-box, .skill-card, .project-card, .contact-box"
     );
 
     if (!reducedMotion && "IntersectionObserver" in window) {
-
         revealElements.forEach((element) => {
             element.classList.add("reveal");
         });
 
         const revealObserver = new IntersectionObserver(
             (entries, observer) => {
-
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add("visible");
                         observer.unobserve(entry.target);
                     }
                 });
-
             },
             {
                 threshold: 0.05,
@@ -85,36 +229,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // ====================================
-    // 3. ACTIVE NAVIGATION LINK
-    // ====================================
-
-    const navLinks = document.querySelectorAll(
-        'nav a[href^="#"]'
-    );
+    // ========================================
+    // 6. ACTIVE NAVIGATION LINKS
+    // ========================================
 
     const sectionLinks = [];
 
-    navLinks.forEach((link) => {
+    document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
         const id = link.getAttribute("href").slice(1);
 
-        if (!id) {
-            return;
-        }
+        if (!id) return;
 
         const section = document.getElementById(id);
 
         if (section) {
-            sectionLinks.push({
-                link,
-                section
-            });
+            sectionLinks.push({ link, section });
         }
     });
 
     function updateActiveNavigation() {
         const scrollPosition = window.scrollY + 160;
-
         let activeLink = null;
 
         sectionLinks.forEach(({ link, section }) => {
@@ -124,12 +258,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         sectionLinks.forEach(({ link }) => {
-            link.classList.toggle(
-                "nav-active",
-                link === activeLink
-            );
+            const isActive = link === activeLink;
 
-            if (link === activeLink) {
+            link.classList.toggle("nav-active", isActive);
+
+            if (isActive) {
                 link.setAttribute("aria-current", "location");
             } else {
                 link.removeAttribute("aria-current");
@@ -153,3 +286,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
